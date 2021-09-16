@@ -4,8 +4,8 @@ def send_email(item_url):
 
     smtp_server = "smtp.gmail.com"
     port = 587  # For starttls
-    sender_email = "itemfinder123@gmail.com"
-    password = 'Willowst1@'
+    sender_email = ""
+    password = ''
 
     # Create a secure SSL context
     context = ssl.create_default_context()
@@ -19,8 +19,8 @@ def send_email(item_url):
         server.login(sender_email, password)
         # TODO: Send email here
 
-        sender_email = "itemfinder123@gmail.com"
-        receiver_email = "hockelly@gmail.com"
+        sender_email = ""
+        receiver_email = ""
         message =  """\
 Subject: ITEM FOUND
 

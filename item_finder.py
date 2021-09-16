@@ -13,7 +13,7 @@ def open_browser():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("disable-gpu")
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-    browser = webdriver.Chrome(executable_path='/Users/jonat/Downloads/chromedriver_win32/chromedriver', options=chrome_options)
+    browser = webdriver.Chrome(executable_path='', options=chrome_options)
 
     time.sleep(5)
 
@@ -53,7 +53,6 @@ def input_item():
 def open_new_page(item):
 
     browser = open_browser()
-
 
     browser.get(str(item))
     assert "Best Buy" in browser.title
@@ -95,11 +94,3 @@ def is_avaliable(browser):
 if __name__ == '__main__':
 
     input_item()
-
-    #p = Process(target=input_item)
-    #p.start()
-    #q = Process(target=ROG_3060)
-    #q.start()
-    #t = Process(target=MSI_3060)
-    #t.start()
-    #t.join()
